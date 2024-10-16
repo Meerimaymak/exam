@@ -1,0 +1,395 @@
+@font-face {
+    font-family: "Alice";
+    src: url(./assets/Alice-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(./assets/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--white);
+}
+
+:root{
+    --green: #04b90b;
+    --gray: #777E90;
+    --white:#FFFFFF;
+    --text:#353945;
+    --h1:#23262f;
+}
+
+/* ------------HEADING------------------ */
+
+
+.green{
+    color: var(--green);
+}
+
+
+.poppins{
+    font-family: "Poppins";
+}
+
+.alice {
+    font-family: "Alice";
+}
+
+
+h1 {
+    font-family: "Alice";
+    font-weight: 400;
+    font-size: 48px;
+    text-transform: capitalize;
+    color: var(--h1);
+}
+
+.heading{
+    text-align: center;
+}
+
+
+.best{
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: capitalize;
+    margin-top: 12px;
+    color: var(--gray);
+
+}
+
+
+
+/* ------------NAVIGATION----------------------- */
+
+.nav{
+    border-radius: 8px;
+    padding: 6px;
+    width: 672px;
+    height: 74px;
+    box-shadow: 0 3px 9px 0 rgba(1, 5, 20, 0.05);
+    background: #fff;
+    margin: 32px auto;
+    gap: 45px;
+}
+
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 36px;
+}
+
+li {
+    list-style: none;
+}
+
+.koran, .vietnam, .thailand{
+    width: 196px;
+    height: 62px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    text-decoration: none;
+}
+
+
+li img {
+    width: 33px;
+    height: 33px;
+    margin-right: 8px;
+}
+
+.bird{
+    display: none;
+}
+
+a .nav-text{
+    font-size: 20px;
+    font-family: "Poppins";
+}
+
+
+.korean
+{
+    background-color: var(--green);
+    color: var(--white);
+    width: 196px;
+    height: 62px;
+    border-radius: 8px;
+}
+
+
+/* -------------PRICE---------------------------- */
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    gap: 74px;
+    justify-content: center;
+    width: 100%;
+    margin: 80px auto; 
+}
+
+.card {
+    width: 340px;
+    height: 481px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0px 0px 27px rgba(53, 53, 53, 0.05); 
+    text-align: center;
+    padding: 24px;
+}
+
+.card img {
+    width: 284px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: var(--h1);
+    font-weight: 400;
+    font-family: "Alice";
+}
+
+.rating {
+    color: var(--green);
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.reviews {
+    font-size: 16px;
+    color: var(--text);
+    font-family: "Poppins";
+}
+
+.price {
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--green); 
+    margin: 10px 0;
+}
+
+.price-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.btn {
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+
+.btn:hover {
+    background-color: var(--green);
+}
+
+
+/* ---------------------ADAPTIVE--------------------------------- */
+@media (max-width: 1024px) {
+
+
+    main {
+        display: flex;
+        text-align: center;
+    }
+
+
+    .title {
+        width: 770px;
+        height: 241px;
+    }
+
+    .row{
+        margin-left: 52px;
+        margin-right: 52px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+
+    .best{
+        font-size: 20px;
+    }
+
+    .card-container{
+        width: 920px;
+        height: 848px;
+    }
+
+
+    .card{
+       max-width: 300px;
+       height: auto
+    }
+
+    .card img{
+        width: 200px;
+        height: auto;
+    }
+
+    
+h3 {
+    font-size: 24px;
+}
+
+.rating {
+    font-size: 16px;
+}
+
+.reviews {
+    font-size: 14px;
+}
+
+.price {
+    font-size: 28px;
+    visibility: hidden;
+    position: relative;
+}
+
+.price::after{
+    content: "$12.99";
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--green);
+    font-family: "Alice";
+}
+
+.price-order{
+    width: 100%;
+    gap: 10px;
+}
+
+.btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+
+}
+
+}
+
+/* ------------PHONE------------------------- */
+@media (max-width: 374px) {
+
+
+    main {
+        height: 2929px;
+        width: 374px;
+        display: flex;
+        text-align: center;
+    }
+
+    .title {
+        box-sizing: content-box;
+        padding: 40px 23px 60px 23px;
+        width: 374px;
+        height: 352px;
+        text-align: center;
+    }
+
+    .heading{
+        margin: 0 auto;
+    }
+   
+    h1{
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: -0.01em;
+    }
+
+    .best{
+        font-size: 18px;
+        text-align: center; 
+    }
+
+    
+    .nav {
+        padding: 6px;
+        width: 328px;
+        height: 74px;
+        margin: 44px auto 0;
+    }
+
+    .korean {
+        display: flex;
+        border-radius: 8px;
+        padding: 0px 12px;
+        width: 316px;
+        height: 62px;
+        justify-content: flex-start;
+    }
+
+    .bird {
+        display: block;
+        margin-right: 10px;
+        margin-top: 6px;
+    }
+
+    
+    .vietnam,
+    .thialand{
+        display: none;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        margin: 32px auto;
+
+    }
+    
+}
